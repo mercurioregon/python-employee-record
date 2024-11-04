@@ -89,3 +89,32 @@ def remove_employee():
 
         finally:
             cursor.close()
+
+def promote_employee():
+    Id = input("Enter employee ID: ")
+    if not check_employee(Id):
+        print("Employee does not exist. Please try again.")
+        return
+
+    else:
+        try:
+            Amount = float(input("Enter increase in salary: "))
+
+            sql_select = 'SELECT salary FROM employees WHERE id=%s'
+            data = (Id, )
+            cursor = con.cursor()
+            cursor.execute(sql_select, data)
+            current_salary = cursor.fetchone()[0]
+            new_salary = current + Amount
+            sql_update = 'UPDATE employees SET salary =%s WHERE id=%s'
+            data_update = (new_salary, Id)
+            cursor.execute(sql_update, data_update)
+            con.commit ()
+            print("Employee salary updated successfully.")
+
+        except (ValueError, mysql.connector.Error) as e:
+            print(f"Error: {e}")
+            con.rollback()
+
+        finally:
+            cursor.close()
