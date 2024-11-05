@@ -118,3 +118,24 @@ def promote_employee():
 
         finally:
             cursor.close()
+
+def display_employees():
+    try:
+        sql = 'SELECT * FROM employees'
+        cursor = con.cursor()
+        cursor.execute(sql)
+        employees = cursor = cursor.fetchall()
+        for employee in employees:
+           print("Employee ID: ", employee[0])
+           print("Employee name: ", employee[1])
+           print("Employee position: ", employee[2])
+           print("Employee salary: ", employee[3])
+           print("------------------------------------------------")
+
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+
+    finally:
+        cursor.close()
+
+           
