@@ -138,4 +138,29 @@ def display_employees():
     finally:
         cursor.close()
 
-           
+def menu ():
+    while True:
+        print("\nWelcome to Employee Management Record")
+        print("Press:")
+        print("1 to add employee")
+        print("2 to remove employee")
+        print("3 to increase employee salary")
+        print("4 to display employees")
+        print("5 to exit")
+
+        opt = input("Enter option: ")
+
+        if opt == "1":
+            add_employee()
+        elif opt =="2":
+            remove_employee()
+        elif opt == "3":
+            promote_employee()
+        elif opt == "4":
+            display_employees()
+        elif  opt =="5":
+            print("Exiting the system.")
+            break
+        else:
+            print("Invalid option.  Try again.")
+          
