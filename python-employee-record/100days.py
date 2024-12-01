@@ -24,3 +24,36 @@ print(peopleTotal)
 grandTotal = (tipAmount /100 * billTotal + billTotal) / peopleTotal
 print(f"Each person should pay: {grandTotal}")
 
+#BASIC IF/ELSE EXERCISE:
+
+print("welcome to the ride")
+height = int(input("What is you height in inches?"))
+price = 0
+if height >= 48:
+    print("You may ride.")
+    age = int(input("What is your age? "))
+    if age <= 12:
+        price = 5
+        print("Your ticket is $5")
+    elif age <=18:
+        price = 7
+        print("Please pay $7")
+    else:
+        price = 12
+        print("Your ticket is $12")
+    wants_photo = input("Would you like a photo? Y for yes and N for no.")
+    if wants_photo == "Y":
+        price += 3
+    print(f"Your final price is ${price}")
+else:
+    print("Sorry, you may not ride.")
+
+#ODD OR EVEN EXERCISE
+
+# print("Odd or Even?")
+# user_number = int(input("Enter a number."))
+#
+# if user_number % 2 == 0:
+#     print("The number is even.")
+# else:
+#     print("The number is odd.")
