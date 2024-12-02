@@ -57,3 +57,23 @@ else:
 #     print("The number is even.")
 # else:
 #     print("The number is odd.")
+
+#PRICE CALCULATOR
+
+print("Welcome to Pizza Explosion!")
+size = input("What size pizza?  S, M, or L?")
+pepperoni = input("Would you like pepperoni?  Y or N")
+extra_cheese = input("Would you like extra cheese?")
+price = 0
+
+if size == "S":
+    price += 15
+elif size == "M":
+    price += 20
+else:
+   price += 25
+if pepperoni == "Y":
+     price += 3
+if extra_cheese == "Y":
+    price += 2
+print(f"The price of your pizza is{price}")
