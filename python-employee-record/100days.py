@@ -38,6 +38,8 @@ if height >= 48:
     elif age <=18:
         price = 7
         print("Please pay $7")
+    elif age >= 45 and age <= 55:
+        price = 0
     else:
         price = 12
         print("Your ticket is $12")
@@ -77,3 +79,24 @@ if pepperoni == "Y":
 if extra_cheese == "Y":
     price += 2
 print(f"The price of your pizza is{price}")
+
+#TREASURE HUNT PRACTICE CODE. INCOMPLETE
+
+print("TREASURE HUNT")
+crossroad = input("You are are standing at a crossroad.  "
+                  "Which direction do you go? Type L or R.").lower
+
+if crossroad  =="L":
+    print(swamp)
+else:
+    print(crossroad_right)
+    # if swamp == "N":
+    #     print(swamp_end)
+    # else:
+    #     print(crossroad_right)
+
+swamp = input("You're stuck in  a swamp?  Go the other way? Y or N.").lower
+swamp_end = ("You've drowned because you are stubborn and stupid.  Good job.")
+crossroad_right = input("You've reached the edge of a clear lake."
+                        "  There is an island in the middle. 
+                         Wait for a boat, or swim for it.? Type 'swim' or 'wait'")
