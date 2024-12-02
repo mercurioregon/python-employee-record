@@ -100,3 +100,12 @@ swamp_end = ("You've drowned because you are stubborn and stupid.  Good job.")
 crossroad_right = input("You've reached the edge of a clear lake."
                         "  There is an island in the middle. 
                          Wait for a boat, or swim for it.? Type 'swim' or 'wait'")
+
+#IMPORTING AND RANDOMIZATION
+# 
+   import  random
+import mymodule
+
+random_integer = random.randint(1, 10)
+print(random_integer)
+print(mymodule.my_favorite_number)                    
