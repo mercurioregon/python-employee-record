@@ -27,4 +27,7 @@ if _name_ =='_main_':
                 guess = str(input('Enter a letter '))
             except: 
                 print('Enter only a letter.  This is Hangman. What are you doing?')
-                continue    
+                continue
+
+def booger:
+    print()
