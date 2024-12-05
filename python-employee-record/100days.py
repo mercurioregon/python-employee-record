@@ -196,3 +196,16 @@ while is_on:
             payment = process_coins()
             if is_transaction_successful(payment, drink["cost"]):
                 make_coffee(choice, drink["ingredients"])
+
+#OOP AND TURTLE STUFF
+
+from  turtle import Turtle , Screen
+
+clem =Turtle()
+
+print(clem)
+clem.shape("turtle")
+clem.color("DarkGreen")
+my_screen = Screen()
+clem.forward(100)
+my_screen.exitonclick()                
