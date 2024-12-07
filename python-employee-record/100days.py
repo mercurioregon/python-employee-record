@@ -208,4 +208,16 @@ clem.shape("turtle")
 clem.color("DarkGreen")
 my_screen = Screen()
 clem.forward(100)
-my_screen.exitonclick()                
+my_screen.exitonclick()     
+
+#import modules / PRETTYTABLE
+
+from prettytable import PrettyTable
+
+table = PrettyTable()
+
+table.add_column("City Name", ["Portland", "Seattle", "San Francisco"])
+table.add_column("State", ["Oregon", "Washington", "California"])
+table.align= "l"
+print(table)
+
