@@ -232,6 +232,15 @@ user_1 = User("555", "Monkeyface")
 user_2 = User("777", "Pancake")
 print(user_2.username)
 
+#quiz game - classes
+
+class Question:
+    def __init__(self, q_text, q_answer):
+        self.text = q_text
+        self.answer = q_answer
+
+new_q = Question("Bacon?", "False")
+print(new_q.text)
 
 
 
