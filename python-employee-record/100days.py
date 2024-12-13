@@ -248,9 +248,6 @@ from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain
 
-
-
-
 question_bank = []
 for question in question_data:
     question_text = question["text"]
@@ -291,3 +288,11 @@ class QuizBrain:
         else:
             print("Nope")
         print(f"The answer is {correct_answer}.")
+
+#more turtle work
+
+from turtle import Turtle, Screen
+
+chet_turtle = Turtle()
+chet_turtle.shape("turtle")
+chet_turtle.color("green")
