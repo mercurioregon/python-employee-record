@@ -293,6 +293,21 @@ class QuizBrain:
 
 from turtle import Turtle, Screen
 
-chet_turtle = Turtle()
-chet_turtle.shape("turtle")
-chet_turtle.color("green")
+chet = Turtle()
+chet.shape("turtle")
+chet.color("green")
+
+for _ in range(4):
+    chet.forward(100)
+    chet.right(90)
+
+# screen = Screen()
+# screen.exitonclick()   
+
+#giving an alias to an import.
+
+# import turtle as t
+# chet = t
+
+
+
