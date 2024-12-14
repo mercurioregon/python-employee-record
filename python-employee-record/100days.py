@@ -301,6 +301,13 @@ for _ in range(4):
     chet.forward(100)
     chet.right(90)
 
+for _ in range(50):
+    chet.forward(10)
+    chet.up()
+    chet.forward(10)
+    chet.down()
+
+
 # screen = Screen()
 # screen.exitonclick()   
 
