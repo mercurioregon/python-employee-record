@@ -316,5 +316,31 @@ for _ in range(50):
 # import turtle as t
 # chet = t
 
+#more turtle work
+
+
+from  turtle import Turtle , Screen
+import random
+
+clem =Turtle()
+
+
+colors = ["Red", "Yellow" , "Green"]
+clem.shape("turtle")
+clem.color("DarkGreen")
+
+def draw_shape(num_sides):
+    angle = 360 / num_sides
+    for _ in range(num_sides):
+        clem.forward(100)
+        clem.right(angle)
+
+for shape_side_n in range(3, 11):
+     clem.color(random.choice(colors))
+     draw_shape(shape_side_n)
+
+
+my_screen = Screen()
+my_screen.exitonclick()
 
 
