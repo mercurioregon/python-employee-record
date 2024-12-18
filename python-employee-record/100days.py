@@ -350,8 +350,18 @@ def random_color():
     line_color = (r, g, b)
     return line_color
 
+#randomized colors
 
 for _ in range(200):
     clem.color(random_color())
     clem.forward(50)
     clem.setheading(random.choice(directions))
+
+#sprigraph with random colors
+
+for _ in range(200):
+    clem.color(random_color())
+    clem.circle(100)
+    current_heading = clem.heading()
+    clem.setheading(current_heading + 10)
+
