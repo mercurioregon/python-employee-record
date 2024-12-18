@@ -343,4 +343,15 @@ for shape_side_n in range(3, 11):
 my_screen = Screen()
 my_screen.exitonclick()
 
+def random_color():
+    r = random.randint(0,255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    line_color = (r, g, b)
+    return line_color
 
+
+for _ in range(200):
+    clem.color(random_color())
+    clem.forward(50)
+    clem.setheading(random.choice(directions))
