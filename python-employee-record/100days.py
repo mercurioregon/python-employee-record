@@ -365,3 +365,19 @@ for _ in range(200):
     current_heading = clem.heading()
     clem.setheading(current_heading + 10)
 
+#COLRGRAM
+
+import colorgram
+
+colors = colorgram.extract('Hirstspotpainting.jpg', 8)
+
+
+rgb_colors =  []
+for color in colors:
+    r = color.rgb.r
+    g = color.rgb.g
+    b = color.rgb.b
+    new_color = (r,g,b)
+    rgb_colors.append(new_color)
+
+print(rgb_colors)
