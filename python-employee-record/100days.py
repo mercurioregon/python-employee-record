@@ -381,3 +381,18 @@ for color in colors:
     rgb_colors.append(new_color)
 
 print(rgb_colors)
+
+mport turtle as turtle_module
+import random
+
+turtle_module.colormode(255)
+color_list  = [(144, 76, 50), (188, 165, 117), (248, 244, 246), (166, 153, 36), (14, 46, 85), (139, 185, 176), (146, 56, 81), (42, 110, 136), (59, 120, 99), (145, 170, 177), (87, 35, 30), (64, 152, 169)]
+
+clem =turtle_module.Turtle()
+clem.home()
+clem.dot()
+clem.dot(20,  random.choice(color_list))
+
+
+screen = turtle_module.Screen()
+screen.exitonclick()
