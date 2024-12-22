@@ -382,16 +382,36 @@ for color in colors:
 
 print(rgb_colors)
 
-mport turtle as turtle_module
+import turtle as turtle_module
 import random
 
 turtle_module.colormode(255)
+
+
 color_list  = [(144, 76, 50), (188, 165, 117), (248, 244, 246), (166, 153, 36), (14, 46, 85), (139, 185, 176), (146, 56, 81), (42, 110, 136), (59, 120, 99), (145, 170, 177), (87, 35, 30), (64, 152, 169)]
 
 clem =turtle_module.Turtle()
 clem.home()
 clem.dot()
-clem.dot(20,  random.choice(color_list))
+clem.penup()
+clem.hideturtle()
+clem.speed("fastest")
+clem.setheading(225)
+clem.fd(300)
+clem.setheading(0)
+number_of_dots = 101
+
+for dot_count in range(1, number_of_dots):
+    clem.dot(20, random.choice(color_list))
+    clem.fd(50)
+
+    if dot_count % 10 == 0:
+     clem.setheading(90)
+     clem.fd(50)
+     clem.setheading(180)
+     clem.fd(500)
+     clem.setheading(0)
+
 
 
 screen = turtle_module.Screen()
