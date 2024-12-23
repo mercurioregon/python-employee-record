@@ -416,3 +416,34 @@ for dot_count in range(1, number_of_dots):
 
 screen = turtle_module.Screen()
 screen.exitonclick()
+
+
+
+from turtle import Turtle, Screen
+
+chet = Turtle()
+screen = Screen()
+
+def move_forward():
+    chet.fd(10)
+
+def move_left():
+    new_heading = chet.heading() + 10
+    chet.setheading(new_heading)
+
+
+def move_right():
+    new_heading = chet.heading() - 10
+    chet.setheading(new_heading)
+
+def move_backward():
+    chet.backward(10)
+
+screen.listen()
+screen.onkey(move_forward, "w")
+screen.onkey(move_left, "a")
+screen.onkey(move_right, "s")
+screen.onkey(move_backward, "z")
+
+
+screen.exitonclick()
