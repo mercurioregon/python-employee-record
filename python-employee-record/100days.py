@@ -447,3 +447,51 @@ screen.onkey(move_backward, "z")
 
 
 screen.exitonclick()
+
+
+#TURTLE RACE
+
+from turtle import Turtle, Screen
+
+
+screen = Screen()
+screen.setup(500,400)
+user_bet = screen.textinput("Make your bet", "Choose a color: R,G,Y,B,O, or P")
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+y_postions = [-70, -40, -10, 20, 50, 80]
+#GOTO changes position of turtle on graph page
+for turtle_index in range (0,6)
+    chet = Turtle(shape="turtle")
+    chet.penup()
+    chet.color(colors[turtle_index])
+    chet.goto(x=-230, y=y_postions[turtle_index])
+
+    #(ABOVE FOR LOOP REPLACES ALL OF THE BELOW)
+
+# chet = Turtle(shape="turtle")
+# chet.penup()
+# chet.color("blue")
+# chet.goto(x=-230, y=66)
+# 
+# chet = Turtle(shape="turtle")
+# chet.penup()
+# chet.color("orange")
+# chet.goto(x=-230, y=33)
+# 
+# chet = Turtle(shape="turtle")
+# chet.penup()
+# chet.color("yellow")
+# chet.goto(x=-230, y=-33)
+# 
+# chet = Turtle(shape="turtle")
+# chet.penup()
+# chet.color("purple")
+# chet.goto(x=-230, y=-66)
+# 
+# chet = Turtle(shape="turtle")
+# chet.penup()
+# chet.color("green")
+# chet.goto(x=-230, y=-99)
+
+
+screen.exitonclick()
