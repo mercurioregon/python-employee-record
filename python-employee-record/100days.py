@@ -451,20 +451,44 @@ screen.exitonclick()
 
 #TURTLE RACE
 
+
 from turtle import Turtle, Screen
+import random
 
-
+is_race_on = False
 screen = Screen()
 screen.setup(500,400)
 user_bet = screen.textinput("Make your bet", "Choose a color: R,G,Y,B,O, or P")
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 y_postions = [-70, -40, -10, 20, 50, 80]
-#GOTO changes position of turtle on graph page
-for turtle_index in range (0,6)
-    chet = Turtle(shape="turtle")
-    chet.penup()
-    chet.color(colors[turtle_index])
-    chet.goto(x=-230, y=y_postions[turtle_index])
+all_turtles = []
+
+
+for turtle_index in range (0,6):
+    new_turtle = Turtle(shape="turtle")
+    new_turtle.penup()
+    new_turtle.color(colors[turtle_index])
+    new_turtle.goto(x=-230, y=y_postions[turtle_index])
+    all_turtles.append(new_turtle)
+
+if user_bet:
+    is_race_on = True
+
+while is_race_on:
+    for turtle in all_turtles:
+        if turtle.xcor() > 230:
+            is_race_on = False
+            winning_turtle = turtle.pencolor()
+            if winning_turtle == user_bet:
+                print(f"YOU WIN! The {winning_turtle} turtle is the winner!")
+            else:
+                print(f"The {winning_turtle} won.  YOU LOSE!")
+
+        rand_distance = random.randint(0,10)
+        turtle.forward(rand_distance)
+
+
+screen.exitonclick()
 
     #(ABOVE FOR LOOP REPLACES ALL OF THE BELOW)
 
