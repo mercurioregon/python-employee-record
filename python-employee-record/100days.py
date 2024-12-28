@@ -561,14 +561,18 @@ screen.exitonclick()
 #snake.py is now:
 
 from turtle import Turtle
+
+
 START_POSITIONS = [(0,0), (-20, 0), (-40,0)]
+MOVE_DISTANCE = 20
 
 class Snake:
 
     def __init__(self):
         self.segments = []
         self.create_snake()
-        self.move()
+        self.head = self.segments[0]
+
 
     def create_snake(self):
         for position in START_POSITIONS:
@@ -583,7 +587,13 @@ class Snake:
                 new_x = self.segments[seg_number - 1].xcor()
                 new_y = self.segments[seg_number - 1].ycor()
                 self.segments[seg_number].goto(new_x, new_y)
-                self.segments[0].forward(20)
+            self.head.forward(MOVE_DISTANCE)
 
-
-
+    def  up(self):
+        self.head.setheading(90)
+    def down(self):
+        self.head.setheading(270)
+    def left(self):
+        self.head.setheading(180)
+    def right(self):
+        self.head.setheading(0)
