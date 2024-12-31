@@ -628,3 +628,18 @@ class Food(Turtle):
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
 
+#scoreboard
+
+from turtle import Turtle
+
+class Scoreboard(Turtle):
+
+    def __init__(self):
+        super().__init__()
+        self.score = 0
+        self.color ("yellow")
+        self.penup()
+        self.goto(0, 275)
+        self.write(f"Score: {self.score}", align="center", font=("Georgia", 14, "normal"))
+        self.hideturtle()
+        self.goto(0, 275)
