@@ -630,7 +630,7 @@ class Food(Turtle):
 
 #scoreboard
 
-from turtle import Turtle
+rom turtle import Turtle
 
 class Scoreboard(Turtle):
 
@@ -640,6 +640,14 @@ class Scoreboard(Turtle):
         self.color ("yellow")
         self.penup()
         self.goto(0, 275)
-        self.write(f"Score: {self.score}", align="center", font=("Georgia", 14, "normal"))
         self.hideturtle()
         self.goto(0, 275)
+        self.update_scoreboard()
+
+    def update_scoreboard(self):
+        self.write(f"Score: {self.score}", align="center", font=("Georgia", 14, "normal"))
+
+    def increase_score(self):
+        self.score += 1
+        self.clear()
+        self.update_scoreboard()
