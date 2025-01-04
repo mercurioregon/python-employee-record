@@ -1230,4 +1230,12 @@ class Scoreboard(Turtle):
         self.clear()
         self.update_scoreboard()
 
+#PONG
 
+from turtle import Turtle, Screen
+
+screen = Screen()
+screen.title("PONG")
+screen.setup(height=600, width=800)
+screen.bgcolor("black")
+screen.exitonclick()
