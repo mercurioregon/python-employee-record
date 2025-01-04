@@ -1232,10 +1232,51 @@ class Scoreboard(Turtle):
 
 #PONG
 
+
+#main
 from turtle import Turtle, Screen
+from paddle import Paddle
 
 screen = Screen()
+paddle = Paddle()
+
 screen.title("PONG")
 screen.setup(height=600, width=800)
 screen.bgcolor("black")
+
+
+def go_up():
+    new_y = paddle.ycor() + 20
+    paddle.goto(paddle.xcor(), new_y)
+
+def go_down():
+    new_y = paddle.ycor() - 20
+    paddle.goto(paddle.xcor(), new_y)
+
+
+screen.listen()
+screen.onkey(go_up, "Up")
+screen.onkey(go_down, "Down")
+
 screen.exitonclick()
+
+#paddle
+
+from turtle import Turtle
+
+class Paddle(Turtle):
+
+    def  __init__(self):
+        super().__init__()
+        self.color("white")
+        self.shape("square")
+        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.penup()
+        self.goto(350, 0)
+
+
+
+
+
+
+
