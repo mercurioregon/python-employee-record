@@ -1238,25 +1238,24 @@ from turtle import Turtle, Screen
 from paddle import Paddle
 
 screen = Screen()
-paddle = Paddle()
-
 screen.title("PONG")
 screen.setup(height=600, width=800)
 screen.bgcolor("black")
+screen.tracer(0)
 
-
-def go_up():
-    new_y = paddle.ycor() + 20
-    paddle.goto(paddle.xcor(), new_y)
-
-def go_down():
-    new_y = paddle.ycor() - 20
-    paddle.goto(paddle.xcor(), new_y)
-
+r_paddle = Paddle((350, 0))
+l_paddle = Paddle((-350, 0))
 
 screen.listen()
-screen.onkey(go_up, "Up")
-screen.onkey(go_down, "Down")
+screen.onkey(r_paddle.go_up, "Up")
+screen.onkey(r_paddle.go_down, "Down")
+screen.onkey(l_paddle.go_up, "w")
+screen.onkey(l_paddle.go_down, "z")
+
+game_is_on = True
+while game_is_on:
+    screen.update()
+
 
 screen.exitonclick()
 
@@ -1266,13 +1265,27 @@ from turtle import Turtle
 
 class Paddle(Turtle):
 
-    def  __init__(self):
+    def  __init__(self, position):
         super().__init__()
         self.color("white")
         self.shape("square")
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
-        self.goto(350, 0)
+        self.goto(position)
+
+    def go_up(self):
+        new_y = self.ycor() + 20
+        self.goto(self.xcor(), new_y)
+
+    def go_down(self):
+        new_y = self.ycor() - 20
+        self.goto(self.xcor(), new_y)
+
+
+
+
+
+
 
 
 
