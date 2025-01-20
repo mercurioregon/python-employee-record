@@ -629,7 +629,8 @@ else:
 # if user_number % 2 == 0:
 #     print("The number is even.")
 # else:
-#     print("The number is odd.")
+#     print("The number is  \ 
+# odd.")
 
 #PRICE CALCULATOR
 
@@ -1318,3 +1319,11 @@ class Ball(Turtle):
 
     def bounce_x(self):
         self.x_move *= -1
+
+        Microsoft Windows [Version 10.0.22631.4751]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\james>aws --version
+aws-cli/2.23.2 Python/3.12.6 Windows/11 exe/AMD64
+
+C:\Users\james>
